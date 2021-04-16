@@ -350,6 +350,7 @@ def nonlin_solve(F, x0, jacobian='krylov', iter=None, verbose=False,
 
     if full_output:
         info = {'nit': condition.iteration,
+                'hess_inv': jacobian,
                 'fun': Fx,
                 'status': status,
                 'success': status == 1,
